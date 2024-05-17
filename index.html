@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <!-- Início de <head> com os links de CSS, JS e algumas fontes -->
+  <head>
+    <link rel="stylesheet" href="styles1.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="trabalho.js"></script>
+  </head>
+
+  <body>
+    <!-- Início de <body> e contonstrução de nav para navegação no site por meio de uma <ul> para lista desordenada que permite uma hiperligação entre link da página pelo <a> -->
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#sobremim-secao">Sobre Mim</a> <!--  o href define destino de uma tag <a> e endereço de um arquivo de estilos -->
+          </li>
+          <li>
+            <a href="#formacao">Formação</a>
+          </li>
+          <li>
+            <a href="#projetos">Projetos</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+    </nav>
+
+    <!-- Construção da <section> Sobre Mim que fala brevemente sobre mim -->
+    <section id="sobremim-secao" class="sobremim-secao"> <!-- Utilizando id e class para gerar um identificador único e classe para a seção -->
+        <h1>Olá, eu sou Letícia</h1>
+        <p>Estudante de Engenharia de Software, faço algumas pinturas e edições</p>
+        <p>Interessada em música, cinema e tecnologia</p>
+    </section>
+
+    <!-- Construção da <section> Formação pontuando graduação e alguns cursos -->
+    <section id="formacao" class="formacao-secao">
+        <h2 class="formacao-secao-header">Formação</h2>
+        <p class="p-formacao">Graduação:
+            <ul>
+                <li>Engenharia de Software/UNINTER - Cursando</li>
+            </ul>
+        </p>
+        <p class="p-formacao" id="p-formacao">Outros cursos:
+            <ul>
+                <li>Québec Java Digital/Digital Innovation One - Outubro de 2022</li>
+                <li>Python Básico/Santander Coders - Setembro 2022</li>
+                <li>Banco de dados/Fundação Bradesco - Outubro de 2022</li>
+                <li>Inglês Intermediário</li>
+            </ul>
+        </p>
+    </section>
+
+    <!-- Construção da <section> Projetos, que contém um grid com link para os projetos, nome e uma imagem -->
+    <section id="projetos" class="projetos-secao">
+        <h2 class="projetos-secao-header">Projetos</h2>
+        <div class="projetos-grid"> 
+            <!-- A <div> define uma divisão para organização dos projetos -->
+            <a href="https://github.com/leticiamtx/Desafio-pagina-inicial-do-instagram"
+            target="_blank" class="projetos projetos-titulo">
+                <img class="projetos-imagem"
+                src="https://agenciapastori.com.br/wp-content/uploads/2021/10/6-1024x752.png"
+                alt="projetos"/>
+                <p class="projetos-titulo">
+                    <span class="code">&lt;</span>
+                    Interface do Instagram
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+
+            <a href="https://github.com/leticiamtx/experimento-cloud-parking"
+            target="_blank" class="projetos projetos-titulo">
+                <img class="projetos-imagem"
+                src="https://lcdcondominios.com.br/wp-content/uploads/2021/03/Vagas-de-Estacionamento-Entenda-o-que-Pode-e-o-Que-nao-Pode-no-Condominio.jpg"
+                alt="projetos"/>
+                <p class="projetos-titulo">
+                    <span class="code">&lt;</span>
+                    Experimento cloud-parking
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+
+            <a href="https://github.com/leticiamtx/projeto-banco-dio"
+            target="_blank" class="projetos projetos-titulo">
+                <img class="projetos-imagem"
+                src="https://img.freepik.com/vetores-premium/facada-do-edificio-do-banco-de-desenho-animado-arquitetura-exterior-do-banco-da-cidade-com-colunas-servicos-financeiros_229548-4283.jpg"
+                alt="projetos"/>
+                <p class="projetos-titulo">
+                    <span class="code">&lt;</span>
+                    Simulando um Banco
+                    <span class="code">&#47;&gt;</span>
+                    </p>
+            </a>
+            <a href="https://github.com/leticiamtx/padroes-de-projeto-spring"
+            target="_blank" class="projetos projetos-titulo">
+                <img class="projetos-imagem"
+                src="https://notificacoesinteligentes.com/wp-content/webp-express/webp-images/uploads/2021/07/aplicativo-entrega-mercadoria-og-1024x538.jpg.webp"
+                alt="projetos"/>
+                <p class="projetos-titulo">
+                    <span class="code">&lt;</span>
+                    Testando padrões de projeto
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Construção da <section> Contato -->
+    <section id="contato" class="contato-secao">
+        <div class="contato-secao-header">
+            <h2>Vamos entrar em contato...</h2>
+            <p>Mande uma mensagem</p>
+        </div>
+        <form>
+          <!-- Geração de um formulário -->
+          <div class="form-group">
+            <!-- Label legenda um item, no caso legenda o input do formulário -->
+            <label id="nome-label" for="name">Nome:</label>
+            <!-- Input gera um campo para inserir dados -->
+            <input type="text" name="nome" id="nome" oninput="upperCase()" class="form-control" placeholder="Nome" required>
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" name="email" id="email"  class="form-control" placeholder="Email" required>
+          </div>
+          <div class="form-group1">
+            <p>Digite sua mensagem:</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Escreva aqui..." required></textarea>
+          </div>
+          <!-- Button representa um botão para enviar dados -->
+          <button type="submit" class="enviar" onclick="Enviar();">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer para definir o rodapé da página -->
+    <footer>
+        <div class="contato-links">
+          <a
+            id="profile-link"
+            href="https://github.com/leticiamtx"
+            target="_blank"
+            class="btn contato-detalhes"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a href="mailto:leticiamatxz@gmail.com" class="btn contato-detalhes"><i class="fas fa-at"></i> Email</a
+          >
+          <a href="tel:99293-0537" class="btn contato-detalhes"
+            ><i class="fas fa-mobile-alt"></i> Telefone</a
+          >
+        </div>
+      </footer>
+
+  </body>
+</html>
